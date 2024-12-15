@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты - Sentiment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="bglogo">
+        <img src="images/main.png" alt="Главная картинка">
+        <div class="overlay">
+            <h1>SENTIMENT</h1>
+            <p>Магазин свечей</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="about.html"><u>О нас</u></a></li>
+            <li><a href="examples.html"><u>Примеры работ</u></a></li>
+            <li><a href="contacts.html" class="active"><u>Контакты</u></a></li>
+        </ul>
+    </nav>
+
+    <div id="load-time-header" class="load-time-header">
+        <!-- Здесь будет отображаться время загрузки страницы -->
+    </div>
+</header>
+
+
+<main>
+    <section id="contacts" class="content-section">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами, чтобы заказать эксклюзивные свечи на любой вкус, задать вопросы или получить консультацию!</p>
+
+        <div class="contact-info">
+            <h3>Наши контактные данные:</h3>
+            <ul>
+                <li><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</li>
+                <li><strong>Email:</strong> sentiment@shop.com</li>
+                <li><strong>Адрес:</strong> Москва, ул. Примерная, 123, офис 45</li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h3>Напишите нам:</h3>
+            <form action="#" method="POST">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <section id="contacts" class="content-section">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами, чтобы заказать эксклюзивные свечи на любой вкус!</p>
+        <p>Телефон: .......</p>
+        <p>Email: sentiment@shop.com</p>
+        <p id="load-time"></p> <!-- Здесь будет отображаться время загрузки страницы -->
+    </section>
+</footer>
+
+</body>
+</html>
