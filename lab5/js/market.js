@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const priceValue = document.getElementById('price-value');
     const productList = document.getElementById('product-list');
 
+    // Загружаем цену из localStorage, если она есть
+    const savedPrice = localStorage.getItem('maxPrice');
+    if (savedPrice) {
+        priceRange.value = savedPrice;
+        priceValue.textContent = savedPrice;
+    }
+
     priceRange.addEventListener('input', function () {
         priceValue.textContent = priceRange.value;
     });
@@ -12,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
 
         const maxPrice = parseInt(priceRange.value);
+
+        // Сохраняем выбранную цену в localStorage
+        localStorage.setItem('maxPrice', maxPrice);
 
         const products = productList.querySelectorAll('.product-item');
         products.forEach(function (product) {
