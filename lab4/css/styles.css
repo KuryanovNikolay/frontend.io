@@ -2,8 +2,9 @@
 body {
     background-color: #f7c5d0; /* Розовый фон */
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #333;
+    line-height: 1.6; /* Межстрочный интервал */
 }
 
 h1, h2, p {
@@ -41,11 +42,13 @@ h1, h2, p {
 .bglogo .overlay h1 {
     font-size: 5em;
     font-weight: bold;
+    font-family: 'Georgia', serif; /* Шрифт для заголовков */
 }
 
 .bglogo .overlay p {
     font-size: 1.5em;
     margin-top: 10px;
+    font-family: 'Verdana', sans-serif; /* Шрифт для описания */
 }
 
 /* Навигационное меню с Flexbox */
@@ -76,6 +79,7 @@ h1, h2, p {
     font-size: 1.2em;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Шрифт для ссылок */
     transition: color 0.3s;
 }
 
@@ -92,13 +96,49 @@ h1, h2, p {
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
     border-radius: 10px;
+    font-family: 'Arial', sans-serif; /* Установим шрифт для секций */
 }
 
 .content-section h2 {
-    font-size: 2.5em;
+    font-size: 2.8em; /* Увеличен размер шрифта заголовка */
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 1.4em; /* Увеличен размер шрифта для текста */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Стили для галереи */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px; /* Расстояние между элементами */
+    margin-top: 20px;
+}
+
+.gallery-item {
+    transform: scale(0.7); /* Сжимаем картинку до 70% */
+    transform-origin: center; /* Точка масштабирования по центру */
+    text-align: center;
+    border-radius: 10px; /* Скругление углов */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.gallery-item p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #333;
 }
 
 /* Футер с Flexbox */
@@ -118,16 +158,31 @@ h1, h2, p {
     color: #555;
 }
 
-.navbar ul li a.active {
-    color: red; /* Цвет текста для активного пункта */
-    font-weight: bold; /* Жирный шрифт */
-    text-decoration: underline; /* Подчеркивание */
-}
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+    }
 
-.navbar ul li a.active {
-    color: #fff;
-    background-color: #e91e63; /* Фон для активного пункта */
-    padding: 5px 10px;
-    border-radius: 5px;
-}
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .gallery-item {
+        transform: scale(1); /* Отключаем сжатие для мобильных */
+        margin: 20px 0;
+    }
+
+    .bglogo .overlay h1 {
+        font-size: 3em; /* Уменьшаем размер заголовка */
+    }
+
+    .bglogo .overlay p {
+        font-size: 1.4em;
+    }
+
+    .content-section h2 {
+        font-size: 2em; /* Уменьшаем размер заголовка в секции */
+    }
+}

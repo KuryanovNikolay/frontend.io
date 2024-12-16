@@ -83,6 +83,95 @@ h1, h2, p {
     color: #e91e63;
 }
 
+/* Общие стили для страницы */
+body {
+    background-color: #f7c5d0; /* Розовый фон */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка сайта с флексами и позиционированием */
+.bglogo {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Высота на весь экран */
+}
+
+.bglogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка растягивается на весь экран */
+    filter: brightness(70%);
+}
+
+.bglogo .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bglogo .overlay h1 {
+    font-size: 5em;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Шрифт для заголовков */
+}
+
+.bglogo .overlay p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-family: 'Verdana', sans-serif; /* Шрифт для описания */
+}
+
+/* Навигационное меню с Flexbox */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; /* Шрифт для ссылок */
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #e91e63;
+}
+
 /* Секции страницы */
 .content-section {
     padding: 40px 20px;
@@ -92,82 +181,49 @@ h1, h2, p {
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
     border-radius: 10px;
+    font-family: 'Arial', sans-serif; /* Установим шрифт для секций */
 }
 
 .content-section h2 {
-    font-size: 2.5em;
+    font-size: 2.8em; /* Увеличен размер шрифта заголовка */
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #333;
 }
 
-/* Стили для страницы с товарами (market.html) */
-.product-list {
+.content-section p {
+    font-size: 1.4em; /* Увеличен размер шрифта для текста */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Стили для галереи */
+.gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px; /* Расстояние между элементами */
     margin-top: 20px;
 }
 
-.product-item {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Тень */
+.gallery-item {
+    transform: scale(0.7); /* Сжимаем картинку до 70% */
+    transform-origin: center; /* Точка масштабирования по центру */
     text-align: center;
+    border-radius: 10px; /* Скругление углов */
 }
 
-.product-item img {
-    max-width: 100%;
+.gallery-item img {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
+    object-fit: contain;
+    border-radius: 15px;
 }
 
-.product-item h3 {
+.gallery-item p {
     font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.product-item p {
-    font-size: 1.2em;
-    color: #e91e63;
-}
-
-/* Форма фильтрации */
-.filter-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.filter-form label {
-    font-size: 1.2em;
-    margin-right: 10px;
-}
-
-.filter-form input[type="range"] {
-    width: 200px;
-}
-
-.filter-form .price-value {
-    font-size: 1.2em;
-    margin-left: 10px;
-}
-
-.filter-form button {
-    background-color: #e91e63;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-}
-
-.filter-form button:hover {
-    background-color: #d81b60;
+    margin-top: 10px;
+    color: #333;
 }
 
 /* Футер с Flexbox */
@@ -186,6 +242,36 @@ h1, h2, p {
     font-size: 1.2em;
     color: #555;
 }
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        transform: scale(1); /* Отключаем сжатие для мобильных */
+        margin: 20px 0;
+    }
+
+    .bglogo .overlay h1 {
+        font-size: 3em; /* Уменьшаем размер заголовка */
+    }
+
+    .bglogo .overlay p {
+        font-size: 1.4em;
+    }
+
+    .content-section h2 {
+        font-size: 2em; /* Уменьшаем размер заголовка в секции */
+    }
+}
+
 
 .navbar ul li a.active {
     color: red; /* Цвет текста для активного пункта */
