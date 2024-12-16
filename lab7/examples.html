@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Примеры работ - Sentiment</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Ваш JS файл -->
+    <script src="js/slider.js" defer></script>
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="bglogo">
+        <img src="images/main.png" alt="Главная картинка">
+        <div class="overlay">
+            <h1>SENTIMENT</h1>
+            <p>Магазин свечей</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="about.html" class="active"><u>О нас</u></a></li>
+            <li><a href="examples.html"><u>Примеры работ</u></a></li>
+            <li><a href="contacts.html"><u>Контакты</u></a></li>
+            <li><a href="market.html"><u>Магазин</u></a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="examples" class="content-section">
+        <h2>Примеры работ</h2>
+        <p>Вот некоторые из наших уникальных свечей, которые мы с любовью создаем для вас. Каждая свеча — это не просто предмет интерьера, а настоящая часть вашего уюта и настроения. Мы гордимся нашим ремеслом и всегда стремимся превзойти ожидания наших клиентов.</p>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Слайды с изображениями -->
+                <div class="swiper-slide">
+                    <img src="images/bear.jpg" alt="Свеча Медведь">
+                    <p>Свеча в виде медведя — идеальный подарок для любителей природы.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/fatima.png" alt="Свеча Фатима">
+                    <p>Свеча «Фатима» — сочетание восточной изысканности и теплоты вашего дома.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/pivon.png" alt="Свеча Пион">
+                    <p>Свеча «Пион» — для тех, кто ценит красоту цветов и нежность в интерьере.</p>
+                </div>
+            </div>
+
+            <!-- Элементы управления слайдером -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <section id="contacts" class="content-section">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами, чтобы заказать эксклюзивные свечи на любой вкус!</p>
+        <p>Телефон: .......</p>
+        <p>Email: sentiment@shop.com</p>
+        <p id="load-time"></p>
+    </section>
+</footer>
+
+</body>
+</html>
