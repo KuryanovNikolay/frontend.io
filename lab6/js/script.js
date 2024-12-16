@@ -3,7 +3,7 @@
     window.addEventListener('load', function () {
         const startTime = performance.timing.navigationStart;
         const endTime = performance.timing.loadEventEnd;
-        const loadTime = (endTime - startTime) / 1000; // Время в секундах
+        const loadTime = (endTime - startTime) / 1000;
 
         const loadTimeElement = document.getElementById('load-time');
         if (loadTimeElement) {
@@ -11,35 +11,32 @@
         }
     });
 
-    // Интерактивность меню (наведение мыши на пункты меню)
     document.addEventListener('DOMContentLoaded', function () {
         const menuItems = document.querySelectorAll('.navbar a');
 
         menuItems.forEach(item => {
             item.addEventListener('mouseover', function () {
-                item.style.color = '#e91e63'; // Цвет при наведении
+                item.style.color = '#e91e63';
             });
 
             item.addEventListener('mouseout', function () {
-                item.style.color = ''; // Восстановить исходный цвет
+                item.style.color = '';
             });
         });
     });
 
-    // Установка активного класса на пункт меню в зависимости от текущей страницы
     document.addEventListener('DOMContentLoaded', function () {
-        const currentPage = window.location.pathname.split('/').pop(); // Получаем имя текущей страницы
+        const currentPage = window.location.pathname.split('/').pop();
         const menuItems = document.querySelectorAll('.navbar a');
 
         menuItems.forEach(item => {
             const href = item.getAttribute('href');
             if (href === currentPage) {
-                item.classList.add('active'); // Добавляем класс 'active' для текущей страницы
+                item.classList.add('active');
             }
         });
     });
 
-    // Динамическая фильтрация товаров по цене (для страницы market.html)
     if (window.location.pathname.includes('market.html')) {
         const products = [
             { id: 1, name: 'Свеча Медведь', price: 300, image: 'images/bear.jpg' },
@@ -54,14 +51,12 @@
         const priceValue = document.getElementById('price-value');
         const filterForm = document.getElementById('filter-form');
 
-        // Обновление значения слайдера цены
         priceRange.addEventListener('input', () => {
             priceValue.textContent = priceRange.value;
         });
 
-        // Функция для отображения товаров
         function displayProducts(filteredProducts) {
-            productList.innerHTML = ''; // Очищаем список товаров
+            productList.innerHTML = '';
 
             filteredProducts.forEach(product => {
                 const productItem = document.createElement('div');
@@ -75,10 +70,8 @@
             });
         }
 
-        // Изначально отображаем все товары
         displayProducts(products);
 
-        // Фильтрация товаров по цене
         filterForm.addEventListener('submit', event => {
             event.preventDefault();
 

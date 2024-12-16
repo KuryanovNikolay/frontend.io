@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Инициализация Swiper
     const swiper = new Swiper('.swiper-container', {
-        // Параметры слайдера
-        loop: true, // Зацикливание слайдов
-        slidesPerView: 1, // Показывать 1 слайд за раз
-        spaceBetween: 30, // Отступы между слайдами
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
 
-        autoplay: {
-            delay: 3000, // Автопрокрутка каждые 3 секунды
-            disableOnInteraction: false, // Не останавливать автопрокрутку при взаимодействии
+        allowTouchMove: true,
+        simulateTouch: true,
+        grabCursor: true,
+
+        mousewheel: {
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
         },
+
+        effect: 'slide',
 
         pagination: {
-            el: '.swiper-pagination', // Пагинация
-            clickable: true, // Возможность клика
+            el: '.swiper-pagination',
+            clickable: true,
         },
 
-        navigation: {
-            nextEl: '.swiper-button-next', // Кнопка "Следующий"
-            prevEl: '.swiper-button-prev', // Кнопка "Предыдущий"
-        },
-
-        effect: 'slide', // Анимация прокрутки (slide, fade, cube, etc.)
+        navigation: false,
     });
 });

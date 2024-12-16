@@ -1,17 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Элемент для загрузки (preloader)
     const preloader = document.getElementById('preloader');
     const gallery = document.getElementById('gallery');
 
-    // Псевдо-случайная фильтрация
     const randomId = Math.random() > 0.5 ? 100 : 200;
 
-    // Функция для загрузки данных
     function fetchData() {
-        // Показать прелоадер
         preloader.style.display = 'block';
 
-        // Выполнение запроса через Fetch API
         fetch(`https://jsonplaceholder.typicode.com/photos?_start=${randomId}&_limit=5`)
             .then(response => {
                 if (!response.ok) {
@@ -20,13 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                // Скрыть прелоадер после получения данных
                 preloader.style.display = 'none';
 
-                // Очистить существующие данные
                 gallery.innerHTML = '';
 
-                // Отобразить новые данные
                 data.forEach(item => {
                     const galleryItem = document.createElement('div');
                     galleryItem.className = 'gallery-item';
@@ -47,6 +39,5 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Инициализация загрузки данных
     fetchData();
 });

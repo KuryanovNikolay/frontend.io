@@ -1,4 +1,3 @@
-/* Общие стили для страницы */
 body {
     background-color: #f7c5d0; /* Розовый фон */
     margin: 0;
@@ -11,17 +10,16 @@ h1, h2, p {
     padding: 0;
 }
 
-/* Шапка сайта с флексами и позиционированием */
 .bglogo {
     position: relative;
     text-align: center;
-    height: 100vh; /* Высота на весь экран */
+    height: 100vh;
 }
 
 .bglogo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Картинка растягивается на весь экран */
+    object-fit: cover;
     filter: brightness(70%);
 }
 
@@ -48,7 +46,6 @@ h1, h2, p {
     margin-top: 10px;
 }
 
-/* Навигационное меню с Flexbox */
 .navbar {
     position: absolute;
     top: 20px;
@@ -83,13 +80,12 @@ h1, h2, p {
     color: #e91e63;
 }
 
-/* Общие стили для страницы */
 body {
-    background-color: #f7c5d0; /* Розовый фон */
+    background-color: #f7c5d0;
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333;
-    line-height: 1.6; /* Межстрочный интервал */
+    line-height: 1.6;
 }
 
 h1, h2, p {
@@ -97,17 +93,16 @@ h1, h2, p {
     padding: 0;
 }
 
-/* Шапка сайта с флексами и позиционированием */
 .bglogo {
     position: relative;
     text-align: center;
-    height: 100vh; /* Высота на весь экран */
+    height: 100vh;
 }
 
 .bglogo img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Картинка растягивается на весь экран */
+    object-fit: cover;
     filter: brightness(70%);
 }
 
@@ -127,16 +122,15 @@ h1, h2, p {
 .bglogo .overlay h1 {
     font-size: 5em;
     font-weight: bold;
-    font-family: 'Georgia', serif; /* Шрифт для заголовков */
+    font-family: 'Georgia', serif;
 }
 
 .bglogo .overlay p {
     font-size: 1.5em;
     margin-top: 10px;
-    font-family: 'Verdana', sans-serif; /* Шрифт для описания */
+    font-family: 'Verdana', sans-serif;
 }
 
-/* Навигационное меню с Flexbox */
 .navbar {
     position: absolute;
     top: 20px;
@@ -164,7 +158,7 @@ h1, h2, p {
     font-size: 1.2em;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Arial', sans-serif; /* Шрифт для ссылок */
+    font-family: 'Arial', sans-serif;
     transition: color 0.3s;
 }
 
@@ -172,7 +166,6 @@ h1, h2, p {
     color: #e91e63;
 }
 
-/* Секции страницы */
 .content-section {
     padding: 40px 20px;
     background-color: #f7c5d0; /* Розовый фон */
@@ -181,11 +174,11 @@ h1, h2, p {
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень */
     border-radius: 10px;
-    font-family: 'Arial', sans-serif; /* Установим шрифт для секций */
+    font-family: 'Arial', sans-serif;
 }
 
 .content-section h2 {
-    font-size: 2.8em; /* Увеличен размер шрифта заголовка */
+    font-size: 2.8em;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 20px;
@@ -193,24 +186,23 @@ h1, h2, p {
 }
 
 .content-section p {
-    font-size: 1.4em; /* Увеличен размер шрифта для текста */
+    font-size: 1.4em;
     color: #555;
     line-height: 1.5;
 }
 
-/* Стили для галереи */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
-    gap: 20px; /* Расстояние между элементами */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 20px;
 }
 
 .gallery-item {
-    transform: scale(0.7); /* Сжимаем картинку до 70% */
-    transform-origin: center; /* Точка масштабирования по центру */
+    transform: scale(0.7);
+    transform-origin: center;
     text-align: center;
-    border-radius: 10px; /* Скругление углов */
+    border-radius: 10px;
 }
 
 .gallery-item img {
@@ -226,7 +218,6 @@ h1, h2, p {
     color: #333;
 }
 
-/* Футер с Flexbox */
 .footer {
     background-color: #f7c5d0;
     padding: 20px 0;
@@ -235,7 +226,7 @@ h1, h2, p {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2); /* Тень сверху */
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .footer p {
@@ -243,10 +234,9 @@ h1, h2, p {
     color: #555;
 }
 
-/* Мобильная адаптивность */
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильных */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .navbar ul {
@@ -255,12 +245,12 @@ h1, h2, p {
     }
 
     .gallery-item {
-        transform: scale(1); /* Отключаем сжатие для мобильных */
+        transform: scale(1);
         margin: 20px 0;
     }
 
     .bglogo .overlay h1 {
-        font-size: 3em; /* Уменьшаем размер заголовка */
+        font-size: 3em;
     }
 
     .bglogo .overlay p {
@@ -268,20 +258,20 @@ h1, h2, p {
     }
 
     .content-section h2 {
-        font-size: 2em; /* Уменьшаем размер заголовка в секции */
+        font-size: 2em;
     }
 }
 
 
 .navbar ul li a.active {
-    color: red; /* Цвет текста для активного пункта */
-    font-weight: bold; /* Жирный шрифт */
-    text-decoration: underline; /* Подчеркивание */
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .navbar ul li a.active {
     color: #fff;
-    background-color: #e91e63; /* Фон для активного пункта */
+    background-color: #e91e63;
     padding: 5px 10px;
     border-radius: 5px;
 }

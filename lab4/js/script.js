@@ -2,7 +2,7 @@
     window.addEventListener('load', function () {
         const startTime = performance.timing.navigationStart;
         const endTime = performance.timing.loadEventEnd;
-        const loadTime = (endTime - startTime) / 1000; // Время в секундах
+        const loadTime = (endTime - startTime) / 1000;
 
         const loadTimeElement = document.getElementById('load-time');
         if (loadTimeElement) {
