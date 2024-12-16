@@ -1,7 +1,4 @@
 (function () {
-    // Все ваши скрипты здесь
-
-    // Время загрузки страницы
     window.addEventListener('load', function () {
         const startTime = performance.timing.navigationStart;
         const endTime = performance.timing.loadEventEnd;
@@ -13,7 +10,6 @@
         }
     });
 
-    // Интерактивность меню (наведение мыши на пункты меню)
     document.addEventListener('DOMContentLoaded', function () {
         const menuItems = document.querySelectorAll('.navbar a');
 
@@ -28,15 +24,14 @@
         });
     });
 
-    // Установка активного класса на пункт меню в зависимости от текущей страницы
     document.addEventListener('DOMContentLoaded', function () {
-        const currentPage = window.location.pathname.split('/').pop(); // Получаем имя текущей страницы
+        const currentPage = window.location.pathname.split('/').pop();
         const menuItems = document.querySelectorAll('.navbar a');
 
         menuItems.forEach(item => {
             const href = item.getAttribute('href');
             if (href === currentPage) {
-                item.classList.add('active'); // Добавляем класс 'active' для текущей страницы
+                item.classList.add('active');
             }
         });
     });
